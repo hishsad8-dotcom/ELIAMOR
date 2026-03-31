@@ -2,82 +2,139 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Elisa 💖</title>
+<title>Para Elisa 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  text-align: center;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  color: white;
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  font-family:'Dancing Script', cursive;
+  color:white;
 }
 
-h1 {
-  margin-top: 50px;
-  font-size: 3em;
+/* pantalla clave */
+.lock{
+  text-align:center;
 }
 
-p {
-  font-size: 1.4em;
+input{
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  font-size:1em;
+  text-align:center;
 }
 
-button {
-  padding: 15px 25px;
-  border: none;
-  border-radius: 20px;
-  background: white;
-  color: #ff4b5c;
-  font-size: 1em;
-  cursor: pointer;
+button{
+  margin-top:10px;
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:white;
+  color:#ff4b5c;
+  cursor:pointer;
 }
 
-.heart {
-  position: fixed;
-  top: -10px;
-  animation: fall linear infinite;
+/* libro */
+.book{
+  display:none;
+  width:300px;
+  height:400px;
+  position:relative;
+  perspective:1500px;
 }
 
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-  }
+.page{
+  width:100%;
+  height:100%;
+  position:absolute;
+  background:white;
+  color:#ff4b5c;
+  border-radius:15px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transform-origin:left;
+  transition:transform 1s;
+  cursor:pointer;
 }
+
+.page.flipped{
+  transform:rotateY(-180deg);
+}
+
+.page:nth-child(1){z-index:6;}
+.page:nth-child(2){z-index:5;}
+.page:nth-child(3){z-index:4;}
+.page:nth-child(4){z-index:3;}
+.page:nth-child(5){z-index:2;}
+.page:nth-child(6){z-index:1;}
 </style>
 </head>
 
 <body>
 
-<h1>💖 Elisa 💖</h1>
+<div class="lock" id="lock">
+  <h1>🔒 Nuestra fecha 💖</h1>
+  <p>Ingresa la fecha especial 😍</p>
+  <input id="clave" placeholder="05/02/2026">
+  <br>
+  <button onclick="abrir()">Abrir 💌</button>
+  <p id="error"></p>
+</div>
 
-<p>Hola mi amor 😍</p>
-<p>Desde que llegaste a mi vida, todo es más bonito ✨</p>
-<p>Eres mi felicidad todos los días 💕</p>
-<p>Gracias por estar conmigo ❤️</p>
+<div class="book" id="book">
 
-<button onclick="mostrar()">Presiona aquí 💌</button>
+  <div class="page" onclick="pasar(this)">
+    <h2>💖 Elisa 💖<br><br>Toca para comenzar 📖</h2>
+  </div>
 
-<p id="msg"></p>
+  <div class="page" onclick="pasar(this)">
+    <p>Desde el 05/02/2026... mi vida cambió 💕</p>
+  </div>
+
+  <div class="page" onclick="pasar(this)">
+    <p>Eres mi sonrisa diaria 😍<br>Mi lugar favorito ❤️</p>
+  </div>
+
+  <div class="page" onclick="pasar(this)">
+    <p>Contigo aprendí lo que es amar de verdad 💖</p>
+  </div>
+
+  <div class="page" onclick="pasar(this)">
+    <p>No importa el tiempo...<br>Siempre serás tú 💕</p>
+  </div>
+
+  <div class="page" onclick="pasar(this)">
+    <h2>Te amo Elisa ❤️<br>Para toda la vida 💍</h2>
+  </div>
+
+</div>
 
 <script>
-function mostrar(){
-  document.getElementById("msg").innerHTML = "Te amo Elisa ❤️ Siempre juntos 💕";
+function abrir(){
+  let clave = document.getElementById("clave").value;
+  
+  if(clave === "05/02/2026"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("book").style.display="block";
+  }else{
+    document.getElementById("error").innerHTML="❌ Fecha incorrecta 😢";
+  }
 }
 
-function corazones(){
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "💖";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-  document.body.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 5000);
+function pasar(p){
+  p.classList.toggle("flipped");
 }
-
-setInterval(corazones, 300);
 </script>
 
 </body>
