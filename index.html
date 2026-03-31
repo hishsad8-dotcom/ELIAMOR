@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Elisa 💖</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  color: #ff4b5c;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.heart {
+  position: fixed;
+  top: -10px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1>💖 Elisa 💖</h1>
+
+<p>Hola mi amor 😍</p>
+<p>Desde que llegaste a mi vida, todo es más bonito ✨</p>
+<p>Eres mi felicidad todos los días 💕</p>
+<p>Gracias por estar conmigo ❤️</p>
+
+<button onclick="mostrar()">Presiona aquí 💌</button>
+
+<p id="msg"></p>
+
+<script>
+function mostrar(){
+  document.getElementById("msg").innerHTML = "Te amo Elisa ❤️ Siempre juntos 💕";
+}
+
+function corazones(){
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+setInterval(corazones, 300);
+</script>
+
+</body>
+</html>
