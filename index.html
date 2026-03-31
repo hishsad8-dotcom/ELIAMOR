@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Para Elisa 💖</title>
+<title>Para mi niña 💖</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
@@ -13,39 +13,44 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  background:linear-gradient(135deg,#ff4b5c,#ff758c,#ff7eb3);
   font-family:'Dancing Script', cursive;
   color:white;
 }
 
-/* pantalla clave */
+/* pantalla tipo celular */
 .lock{
   text-align:center;
+  background:rgba(255,255,255,0.1);
+  padding:30px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
 }
 
 input{
-  padding:10px;
+  padding:15px;
   border:none;
-  border-radius:10px;
-  font-size:1em;
+  border-radius:20px;
+  font-size:1.2em;
   text-align:center;
 }
 
 button{
-  margin-top:10px;
-  padding:10px 20px;
+  margin-top:15px;
+  padding:15px 25px;
   border:none;
-  border-radius:20px;
+  border-radius:30px;
   background:white;
   color:#ff4b5c;
+  font-size:1.2em;
   cursor:pointer;
 }
 
 /* libro */
 .book{
   display:none;
-  width:300px;
-  height:400px;
+  width:320px;
+  height:450px;
   position:relative;
   perspective:1500px;
 }
@@ -61,7 +66,8 @@ button{
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:20px;
+  padding:25px;
+  font-size:1.5em;
   box-shadow:0 10px 25px rgba(0,0,0,0.3);
   transform-origin:left;
   transition:transform 1s;
@@ -72,63 +78,174 @@ button{
   transform:rotateY(-180deg);
 }
 
-.page:nth-child(1){z-index:6;}
-.page:nth-child(2){z-index:5;}
-.page:nth-child(3){z-index:4;}
-.page:nth-child(4){z-index:3;}
-.page:nth-child(5){z-index:2;}
-.page:nth-child(6){z-index:1;}
+/* orden 15 hojas */
+.page:nth-child(1){z-index:15;}
+.page:nth-child(2){z-index:14;}
+.page:nth-child(3){z-index:13;}
+.page:nth-child(4){z-index:12;}
+.page:nth-child(5){z-index:11;}
+.page:nth-child(6){z-index:10;}
+.page:nth-child(7){z-index:9;}
+.page:nth-child(8){z-index:8;}
+.page:nth-child(9){z-index:7;}
+.page:nth-child(10){z-index:6;}
+.page:nth-child(11){z-index:5;}
+.page:nth-child(12){z-index:4;}
+.page:nth-child(13){z-index:3;}
+.page:nth-child(14){z-index:2;}
+.page:nth-child(15){z-index:1;}
+</style>
+</head>
+
+<body>
+
+<!-- CLAVE -->
+<div class="lock" id="lock">
+  <h1>📱 Hola mi niña preciosa 💖</h1>
+  <p>Soy Abner... ingresa nuestra fecha especial 😍</p>
+  <input id="clave
+git add .
+git commit -m "libro pro Elisa 💖"
+git push origin main
+
+
+
+cd ~
+cd ELIAMO
+cd ~
+cd ELIAMOR
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para mi niña 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff4b5c,#ff758c,#ff7eb3);
+  font-family:'Dancing Script', cursive;
+  color:white;
+}
+
+.lock{
+  text-align:center;
+  background:rgba(255,255,255,0.1);
+  padding:30px;
+  border-radius:20px;
+}
+
+input{
+  padding:15px;
+  border:none;
+  border-radius:20px;
+  font-size:1.2em;
+  text-align:center;
+}
+
+button{
+  margin-top:15px;
+  padding:15px 25px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#ff4b5c;
+  font-size:1.2em;
+}
+
+.book{
+  display:none;
+  width:320px;
+  height:450px;
+  position:relative;
+  perspective:1500px;
+}
+
+.page{
+  width:100%;
+  height:100%;
+  position:absolute;
+  background:white;
+  color:#ff4b5c;
+  border-radius:15px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:25px;
+  font-size:1.5em;
+  transform-origin:left;
+  transition:transform 1s;
+}
+
+.page.flipped{
+  transform:rotateY(-180deg);
+}
+
+.page:nth-child(1){z-index:15;}
+.page:nth-child(2){z-index:14;}
+.page:nth-child(3){z-index:13;}
+.page:nth-child(4){z-index:12;}
+.page:nth-child(5){z-index:11;}
+.page:nth-child(6){z-index:10;}
+.page:nth-child(7){z-index:9;}
+.page:nth-child(8){z-index:8;}
+.page:nth-child(9){z-index:7;}
+.page:nth-child(10){z-index:6;}
+.page:nth-child(11){z-index:5;}
+.page:nth-child(12){z-index:4;}
+.page:nth-child(13){z-index:3;}
+.page:nth-child(14){z-index:2;}
+.page:nth-child(15){z-index:1;}
 </style>
 </head>
 
 <body>
 
 <div class="lock" id="lock">
-  <h1>🔒 Nuestra fecha 💖</h1>
-  <p>Ingresa la fecha especial 😍</p>
-  <input id="clave" placeholder="05/02/2026">
+  <h1>📱 Hola mi niña preciosa 💖</h1>
+  <p>Soy Abner... ingresa nuestra fecha 😍</p>
+  <input id="clave" placeholder="dd/mm/yyyy">
   <br>
-  <button onclick="abrir()">Abrir 💌</button>
+  <button onclick="abrir()">💌 Desbloquear</button>
   <p id="error"></p>
 </div>
 
 <div class="book" id="book">
 
-  <div class="page" onclick="pasar(this)">
-    <h2>💖 Elisa 💖<br><br>Toca para comenzar 📖</h2>
-  </div>
-
-  <div class="page" onclick="pasar(this)">
-    <p>Desde el 05/02/2026... mi vida cambió 💕</p>
-  </div>
-
-  <div class="page" onclick="pasar(this)">
-    <p>Eres mi sonrisa diaria 😍<br>Mi lugar favorito ❤️</p>
-  </div>
-
-  <div class="page" onclick="pasar(this)">
-    <p>Contigo aprendí lo que es amar de verdad 💖</p>
-  </div>
-
-  <div class="page" onclick="pasar(this)">
-    <p>No importa el tiempo...<br>Siempre serás tú 💕</p>
-  </div>
-
-  <div class="page" onclick="pasar(this)">
-    <h2>Te amo Elisa ❤️<br>Para toda la vida 💍</h2>
-  </div>
+<div class="page" onclick="pasar(this)">💖 Elisa, mi niña bonita... toca 📖</div>
+<div class="page" onclick="pasar(this)">Desde que llegaste a mi vida todo cambió 💕</div>
+<div class="page" onclick="pasar(this)">Eres mi felicidad diaria 😍</div>
+<div class="page" onclick="pasar(this)">Mi niña preciosa, todo es mejor contigo ✨</div>
+<div class="page" onclick="pasar(this)">Tu sonrisa es mi lugar favorito ❤️</div>
+<div class="page" onclick="pasar(this)">Eres lo mejor que me pasó 💖</div>
+<div class="page" onclick="pasar(this)">Cada momento contigo es único 💕</div>
+<div class="page" onclick="pasar(this)">Eres mi paz 😍</div>
+<div class="page" onclick="pasar(this)">Mi niña bonita, te amo 💖</div>
+<div class="page" onclick="pasar(this)">Siempre tú 💕</div>
+<div class="page" onclick="pasar(this)">Te elegiría mil veces ❤️</div>
+<div class="page" onclick="pasar(this)">Amarte es lo mejor 💖</div>
+<div class="page" onclick="pasar(this)">Siempre contigo 💕</div>
+<div class="page" onclick="pasar(this)">Eres mi todo 😍</div>
+<div class="page" onclick="pasar(this)">💍 Te amo Elisa ❤️</div>
 
 </div>
 
 <script>
 function abrir(){
   let clave = document.getElementById("clave").value;
-  
   if(clave === "05/02/2026"){
     document.getElementById("lock").style.display="none";
     document.getElementById("book").style.display="block";
   }else{
-    document.getElementById("error").innerHTML="❌ Fecha incorrecta 😢";
+    document.getElementById("error").innerHTML="❌ Intenta otra vez 💔";
   }
 }
 
